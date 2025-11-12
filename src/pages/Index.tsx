@@ -23,6 +23,27 @@ const Index = () => {
     },
     {
       id: 3,
+      image: 'https://cdn.poehali.dev/projects/522ab34a-cdd2-46cf-bb0c-d864a571bccf/files/baf0e0cb-9429-4755-a438-33b587b3c070.jpg',
+      title: 'Свадебное платье',
+      category: 'fashion',
+      description: 'Романтичный дизайн с кружевом'
+    },
+    {
+      id: 4,
+      image: 'https://cdn.poehali.dev/projects/522ab34a-cdd2-46cf-bb0c-d864a571bccf/files/fb64ed08-f268-4eee-b6bf-1eceacef0d6d.jpg',
+      title: 'Коктейльное платье',
+      category: 'fashion',
+      description: 'Современный геометрический крой'
+    },
+    {
+      id: 5,
+      image: 'https://cdn.poehali.dev/projects/522ab34a-cdd2-46cf-bb0c-d864a571bccf/files/ca07316c-6d6a-4529-8e25-3ef010a33214.jpg',
+      title: 'Бальное платье',
+      category: 'fashion',
+      description: 'Роскошная драпировка ткани'
+    },
+    {
+      id: 6,
       image: 'https://cdn.poehali.dev/projects/522ab34a-cdd2-46cf-bb0c-d864a571bccf/files/2616a03f-a6c2-4726-9e50-fde1cf012454.jpg',
       title: 'Улыбка и радость',
       category: 'photo',
