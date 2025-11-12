@@ -23,10 +23,10 @@ const Index = () => {
     },
     {
       id: 3,
-      image: 'https://cdn.poehali.dev/projects/522ab34a-cdd2-46cf-bb0c-d864a571bccf/files/8d573395-b00e-456b-a72c-531f46b014e3.jpg',
-      title: 'Эмоциональный портрет',
+      image: 'https://cdn.poehali.dev/projects/522ab34a-cdd2-46cf-bb0c-d864a571bccf/files/2616a03f-a6c2-4726-9e50-fde1cf012454.jpg',
+      title: 'Улыбка и радость',
       category: 'photo',
-      description: 'Живая фотография с душой'
+      description: 'Настоящие эмоции счастья'
     }
   ];
 
@@ -55,7 +55,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20" />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-7xl md:text-9xl font-light mb-6 animate-fade-in tracking-tight">
-            Мария Соколова
+            Лаврик Татьяна
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-scale-in font-light tracking-wide">
             Конструктор одежды & Фотограф
@@ -197,7 +197,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm">
-              © 2024 Мария Соколова. Все права защищены.
+              © 2024 Лаврик Татьяна. Все права защищены.
             </p>
             <div className="flex gap-6">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
