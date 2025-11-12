@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState<'all' | 'fashion' | 'photo'>('all');
+  const [selectedImage, setSelectedImage] = useState<typeof portfolioItems[0] | null>(null);
 
   const portfolioItems = [
     {
@@ -173,6 +175,7 @@ const Index = () => {
               <Card 
                 key={item.id} 
                 className="group overflow-hidden cursor-pointer border-primary/20 bg-card"
+                onClick={() => setSelectedImage(item)}
               >
                 <div className="relative aspect-[3/4] overflow-hidden">
                   <img 
@@ -213,6 +216,50 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <DialogContent className="max-w-5xl p-0 overflow-hidden bg-background border-primary/20">
+          <DialogTitle className="sr-only">{selectedImage?.title}</DialogTitle>
+          {selectedImage && (
+            <div className="relative">
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-background transition-colors"
+              >
+                <Icon name="X" size={20} />
+              </button>
+              <div className="grid md:grid-cols-2 gap-0">
+                <div className="relative aspect-[3/4] md:aspect-auto">
+                  <img
+                    src={selectedImage.image}
+                    alt={selectedImage.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-8 flex flex-col justify-center bg-card/50">
+                  <div className="mb-4">
+                    <span className="inline-block px-3 py-1 rounded-full text-xs bg-primary/20 text-primary mb-4">
+                      {selectedImage.category === 'fashion' ? 'Одежда' : 'Фото'}
+                    </span>
+                  </div>
+                  <h3 className="text-4xl font-light mb-4">{selectedImage.title}</h3>
+                  <p className="text-lg text-muted-foreground mb-8">{selectedImage.description}</p>
+                  <div className="flex gap-3">
+                    <Button size="lg" className="rounded-full">
+                      <Icon name="Mail" size={18} className="mr-2" />
+                      Заказать похожее
+                    </Button>
+                    <Button size="lg" variant="outline" className="rounded-full">
+                      <Icon name="Share2" size={18} className="mr-2" />
+                      Поделиться
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
 
       <footer className="py-12 border-t border-border/50">
         <div className="container mx-auto px-4">
