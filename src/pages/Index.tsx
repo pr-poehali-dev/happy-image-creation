@@ -46,6 +46,48 @@ const Index = () => {
     },
     {
       id: 6,
+      image: 'https://cdn.poehali.dev/projects/522ab34a-cdd2-46cf-bb0c-d864a571bccf/files/f65ec979-6249-426d-b3f0-bff55f1fd218.jpg',
+      title: 'Макси платье',
+      category: 'fashion',
+      description: 'Струящийся силуэт для особых случаев'
+    },
+    {
+      id: 7,
+      image: 'https://cdn.poehali.dev/projects/522ab34a-cdd2-46cf-bb0c-d864a571bccf/files/372a2130-1d53-4772-89e5-96eb2e22e011.jpg',
+      title: 'Платье plus size',
+      category: 'fashion',
+      description: 'Элегантность для каждой фигуры'
+    },
+    {
+      id: 8,
+      image: 'https://cdn.poehali.dev/projects/522ab34a-cdd2-46cf-bb0c-d864a571bccf/files/e7d3b019-3fce-4b70-b142-7a6e2842a122.jpg',
+      title: 'Коктейльное мини',
+      category: 'fashion',
+      description: 'Современный стиль для миниатюрных'
+    },
+    {
+      id: 9,
+      image: 'https://cdn.poehali.dev/projects/522ab34a-cdd2-46cf-bb0c-d864a571bccf/files/b331c0c0-088f-4fcf-9a7d-24a33fd64353.jpg',
+      title: 'Структурное миди',
+      category: 'fashion',
+      description: 'Спортивная элегантность'
+    },
+    {
+      id: 10,
+      image: 'https://cdn.poehali.dev/projects/522ab34a-cdd2-46cf-bb0c-d864a571bccf/files/0673356a-93c9-4c4d-98d5-1e4a31493b2f.jpg',
+      title: 'Вечерний наряд',
+      category: 'fashion',
+      description: 'Классическая утончённость'
+    },
+    {
+      id: 11,
+      image: 'https://cdn.poehali.dev/projects/522ab34a-cdd2-46cf-bb0c-d864a571bccf/files/817085fd-5a2b-40da-a7de-ede1c7c15112.jpg',
+      title: 'Асимметричный крой',
+      category: 'fashion',
+      description: 'Смелый современный дизайн'
+    },
+    {
+      id: 12,
       image: 'https://cdn.poehali.dev/projects/522ab34a-cdd2-46cf-bb0c-d864a571bccf/files/2616a03f-a6c2-4726-9e50-fde1cf012454.jpg',
       title: 'Улыбка и радость',
       category: 'photo',
@@ -59,6 +101,12 @@ const Index = () => {
       title: 'Конструктор одежды',
       description: 'Создание уникальных моделей одежды от эскиза до готового изделия. Индивидуальный подход к каждому клиенту.',
       features: ['Авторские эскизы', 'Пошив на заказ', 'Подбор тканей', 'Примерки']
+    },
+    {
+      icon: 'Palette',
+      title: 'Дизайнер',
+      description: 'Разработка концепций и визуальных решений для модных коллекций. Создание уникального стиля и образов.',
+      features: ['Разработка коллекций', 'Стилистические решения', 'Подбор образов', 'Fashion-консультации']
     },
     {
       icon: 'Camera',
@@ -111,7 +159,7 @@ const Index = () => {
           <h2 className="text-5xl md:text-6xl font-light text-center mb-16 tracking-tight">
             Услуги
           </h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {services.map((service, index) => (
               <Card 
                 key={index} 
